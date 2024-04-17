@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		final double pi=3.14;
+		final int litre=40;
+		double r = sc.nextDouble();
+		double h = sc.nextDouble();
+		
+		
+		double volume=pi*(r*r)*h;
+		
+		double price=(volume*litre)/1000;
+		
+		System.out.printf("%.2f",price);
+	}
+}
