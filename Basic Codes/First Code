@@ -1,0 +1,19 @@
+Write a program to print "My first code on workat.tech".
+
+Expected Output
+My first code on workat.tech
+
+Solution
+________
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.print("My first code on workat.tech");
+	}
+}
