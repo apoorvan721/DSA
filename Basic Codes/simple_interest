@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scanner = new Scanner(System.in);
+		double principal = scanner.nextDouble();
+    double rate = scanner.nextDouble();
+    double time = scanner.nextDouble();
+
+    double interest = (principal * rate * time) / 100;
+
+    System.out.printf("%.6f", interest);
+		
+	}
+}
