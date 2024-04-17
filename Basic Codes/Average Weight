@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		double a[]=new double[10];
+		double sum=0;
+		for(int i=0;i<10;i++){
+			a[i]=sc.nextDouble();
+			sum=sum+a[i];
+		}
+		double avg=sum/10;
+		System.out.printf("%.6f",avg);
+	}
+}
+
+__________________________________________________
+Sample Input
+40.75 45.2 55.3 49.5 43.3 54.1 38.4 63.8 45.2 58.25
+Expected Output
+49.380000
