@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine();
+		String s[]=str.split(" ");
+		int uage=0;
+		String name="";
+		for(int i=0;i<s.length-1;i++){
+			name=s[i];
+			int age=Integer.parseInt(s[i+1]);
+			
+			uage=2020-age;
+		}
+		System.out.print("Happy Birthday "+ name +"! Your current age is "+ uage );
+	}
+}
