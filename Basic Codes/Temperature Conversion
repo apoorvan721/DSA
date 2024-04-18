@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		double a[]=new double[n];
+		for(int i=0;i<n;i++){
+			a[i]=sc.nextDouble();
+		}
+		for(int i=0;i<n;i++){
+			double temp=a[i];
+			double fahrenheit=((9*temp)/5)+32;
+			System.out.printf("%.2f",fahrenheit);
+			System.out.println();
+		}
+	}
+}
