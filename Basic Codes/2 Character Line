@@ -1,0 +1,17 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class WorkAtTech
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		String str="WORKATTECH";
+		for(int i=0;i<str.length();i=i+2){
+			char a=str.charAt(i);
+			char b=str.charAt(i+1);
+			System.out.println(a+""+b);
+		}
+	}
+}
