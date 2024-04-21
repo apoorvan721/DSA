@@ -1,0 +1,18 @@
+class Solution {
+    static String armstrongNumber(int n){
+        int arm=0;
+        int temp=n;
+        while(n!=0){
+            int rem=n%10;
+            arm=(int)Math.pow(rem,3)+arm;
+            n=n/10;
+        }   
+        if(temp==arm){
+            return "Yes";
+        }
+        else{
+            return "No";
+        }
+        
+    }
+}
