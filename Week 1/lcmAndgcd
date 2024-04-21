@@ -1,0 +1,17 @@
+class Solution {
+    static Long[] lcmAndGcd(Long A , Long B) {
+        Long ans[]=new Long[2];
+        ans[1]=find(A,B);
+        ans[0]=A*B/ans[1];
+        return ans;
+}
+    static Long find(Long x, Long y){
+        if(x==0){
+            return y;
+        }
+        if(y==0){
+            return x;
+        }
+        return find(y,x%y);
+    }
+}
