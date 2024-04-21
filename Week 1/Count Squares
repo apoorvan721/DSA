@@ -1,0 +1,11 @@
+class Solution {
+    static int countSquares(int N) {
+        int count=0;
+        for(int i=1;i<=Math.sqrt(N);i++){
+            if(Math.pow(i,2)<N){
+                count++;
+            }
+        }
+        return count;
+    }
+}
