@@ -1,0 +1,21 @@
+class Solution
+{
+    String reverseEqn(String S)
+    {
+        StringBuilder ans=new StringBuilder();
+        String temp="";
+        int n=S.length();
+        for(int i=n-1;i>=0;i--){
+            if(Character.isDigit(S.charAt(i))){
+                temp=S.charAt(i)+temp;
+            }
+            else{
+                ans.append(temp);
+                ans.append(S.charAt(i));
+                temp="";
+            }
+        }
+        ans.append(temp);
+        return ans.toString();
+    }
+}
