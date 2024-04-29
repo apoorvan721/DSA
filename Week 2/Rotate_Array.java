@@ -1,6 +1,4 @@
-package DSA.Week 2;
-
-public import java.util.Arrays;
+import java.util.Arrays;
 
 class Solution {
     public int[] rotate(int[] nums, int k) {
@@ -32,6 +30,4 @@ class Rotate_Array{
     int output[]=s.rotate(nums,k);
     System.out.print(Arrays.toString(output));
 }
-} Rotate_Array {
-    
 }
