@@ -1,0 +1,14 @@
+class Solution {
+    ArrayList<Long> nthRowOfPascalTriangle(int n) {
+        ArrayList<Long> answer=new ArrayList<>();
+        long ans=1;
+        long mod=(long)Math.pow(10,9)+7;
+        for(long i=1;i<=n;i++){
+            answer.add(ans);
+            ans=(ans*(n-i))%mod;
+            ans=(ans/i)%mod;
+            
+        }
+        return answer;
+    }
+}
