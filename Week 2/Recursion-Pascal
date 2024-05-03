@@ -12,6 +12,28 @@ class Solution {
         return answer;
     }
 }
+
+or
+
+class Solution {
+    ArrayList<Long> nthRowOfPascalTriangle(int n) {
+        ArrayList<Long> ans=new ArrayList<>();
+        for(int row=0;row<n;row++){
+            ArrayList<Long> arr=new ArrayList<>();
+            for(int col=0;col<=row;col++){
+                if((col==0)||(col==row)){
+                    arr.add(1L);
+                }
+                else{
+                    Long sum = ans.get(col-1)+ans.get(col);
+                    arr.add(sum);
+            }
+        }
+        ans=arr;
+    }
+    return ans;
+    }
+}
 _______________________________________________________________
 To find the entire Pascal elements using binomial co-efficient
 
