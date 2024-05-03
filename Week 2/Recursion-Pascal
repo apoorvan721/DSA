@@ -13,11 +13,12 @@ class Solution {
     }
 }
 
-or
+Efficient One
 
 class Solution {
     ArrayList<Long> nthRowOfPascalTriangle(int n) {
         ArrayList<Long> ans=new ArrayList<>();
+        long mod=(long)Math.pow(10,9)+7;
         for(int row=0;row<n;row++){
             ArrayList<Long> arr=new ArrayList<>();
             for(int col=0;col<=row;col++){
@@ -26,7 +27,7 @@ class Solution {
                 }
                 else{
                     Long sum = ans.get(col-1)+ans.get(col);
-                    arr.add(sum);
+                    arr.add(sum%mod);
             }
         }
         ans=arr;
