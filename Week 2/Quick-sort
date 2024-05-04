@@ -1,0 +1,32 @@
+class Solution
+{
+    //Function to sort an array using quick sort algorithm.
+    static void quickSort(int arr[], int s, int e)
+    {
+        if(s>=e){
+            return;
+        }
+        int p=partition(arr,s,e);
+        quickSort(arr,s,p-1);
+        quickSort(arr,p+1,e);
+        
+    }
+    static int partition(int arr[], int s, int e)
+    {
+        int pivot=arr[e];
+        int i=s-1;
+        for(int j=s;j<e;j++){
+            if(arr[j]<pivot){
+                i++;
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        i++;
+        int temp=arr[i];
+        arr[i]=pivot;
+        arr[e]=temp;
+        return i;
+    }
+}
