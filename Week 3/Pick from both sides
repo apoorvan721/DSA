@@ -1,0 +1,30 @@
+public class Solution {
+    public int solve(ArrayList<Integer> A, int B) {
+        ArrayList<Integer> arr = A;
+        int n = arr.size();
+        int i = 0, j = n - 1, sum = 0, ans = 0;
+        
+        // Calculate sum of first B elements
+        while (i < B) {
+            sum += arr.get(i);
+            i++;
+        }
+        
+        int maxSum = sum;
+        
+        // Reset i and j for the second loop
+        i = n - 1;
+        j = B - 1;
+        
+        // Iterate from the end to consider replacing B elements from the start
+        while (j >= 0) {
+            sum += arr.get(i);
+            sum -= arr.get(j);
+            maxSum = Math.max(maxSum, sum);
+            i--;
+            j--;
+        }
+        
+        return maxSum;
+    }
+}
