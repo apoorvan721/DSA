@@ -21,7 +21,7 @@ class Solution {
         int len = a.length() > b.length() ? a.length() : b.length();
         int carry = 0;
         StringBuilder temp = new StringBuilder();
-        int i=0,j = 0;
+        int i=0;
         while(i<len || carry!=0){
             int d1 = i>=a.length() ? 0 : Character.getNumericValue(a.charAt(i));
             int d2 = i>=b.length() ? 0 : Character.getNumericValue(b.charAt(i));
