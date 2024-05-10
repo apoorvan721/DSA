@@ -11,3 +11,20 @@ class Solution {
         
     }
 }
+__________________________________________________
+
+class Solution {
+    public int findDuplicate(int[] nums) {
+        Set<Integer> repeat=new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            if(!repeat.contains(nums[i])){
+                repeat.add(nums[i]);
+            }
+            else{
+                return nums[i];
+            }
+        }
+        return -1;
+        
+    }
+}
