@@ -17,3 +17,36 @@ class Solution {
         return count;
     }
 }
+
+____________________________________________________________________
+
+Longest SubArray with sum K(Only for positive int)- Better Than Hashing
+
+class Solution{
+    
+   
+    // Function for finding maximum and value pair
+    public static int lenOfLongSubarr (int A[], int N, int K) {
+        int right=0;
+        int left=0;
+        int sum=A[0];
+        int maxlen=0;
+        while(right<N){
+            while(sum>K && left<N){
+                sum=sum-A[left];
+                left++;
+            }   
+            if(sum==K){
+                maxlen=Math.max(maxlen,right-left+1);
+            }
+            right++;
+            if(right<N){
+                sum=sum+A[right];
+            }
+            
+        }
+        return maxlen;
+    }
+    
+    
+}
