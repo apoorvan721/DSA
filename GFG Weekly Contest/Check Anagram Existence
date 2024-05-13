@@ -1,0 +1,17 @@
+class Solution {
+    public static String doesExists(String S) {
+        char word[]=S.toCharArray();
+        int count=0;
+        for(int i=0;i<word.length-1;i++){
+            if(word[i]!=word[i+1]){
+                count++;
+            }
+        }
+        if(count>1){
+            return "YES";
+        }
+        else{
+            return "NO";
+        }
+    }
+}
